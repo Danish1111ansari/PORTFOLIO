@@ -5,7 +5,12 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import moonImage from "../../Images/moon.jpg";
 import spaceImage from "../../Images/space.jpg";
 import venusImage from "../../Images/venus.jpg";
-const Home = () => {
+import { Typography } from "@mui/material";
+import { Link } from "react-router-dom";
+import { MouseOutlined } from '@mui/icons-material';
+import TimeLine from "../TimeLine/TimeLine";
+
+const Home = ({timelines}) => {
   useEffect(() => {
 
     const textureLoader = new THREE.TextureLoader();
@@ -105,7 +110,43 @@ const Home = () => {
   }, []);
   return (
     <div className="home">
+
       <canvas className="homeCanvas"></canvas>
+
+      {/* <div className="homeCanvasContainer">
+        <Typography variant="h1">
+          <p>D</p>
+          <p>A</p>
+          <p>N</p>
+          <p>I</p>
+          <p>S</p>
+          <p>H</p>
+        </Typography>
+        <div className="homeCanvasBox">
+          <Typography variant="h2">CODER</Typography>
+          <Typography variant="h2">DEVELOPER</Typography>
+        </div>
+
+        <Link to="/projects">VIEW WORK</Link>
+      </div>
+
+      <div className="homeScrollBtn">
+        <MouseOutlined/>
+      </div> */}
+
+
+
+      <div className="homeContainer">
+        <Typography variant="h3">TIMELINE</Typography>
+        <TimeLine timelines={timelines}/>
+      </div>
+
+
+      
+
+      
+
+
     </div>
   );
 };

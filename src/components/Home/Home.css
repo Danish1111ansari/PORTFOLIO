@@ -3,3 +3,60 @@
     height: 100vh;
     max-width: 100%;
 }
+
+
+.homeContainer{
+    background-color: white;
+    padding-top: 4vmax;
+    border-radius: 200px solod white;
+    position: relative;
+    z-index: 1;
+}
+
+
+.homeContainer > h3{ 
+    text-align: center;
+    color: rgba(22,20,20,0.904);
+    padding: 4vmax;
+}
+
+.homeCanvasContainer{
+    background-color: rgba(0,0,0,0.048);
+    width: 100%;
+    z-index:2;
+    position: relative;
+    height: 100vh;
+    color: white;
+    display: flex;
+}
+
+.homeCanvasBox{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    text-align: right;
+    transform: translate(0%,-50%);
+}
+
+.homeScrollBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    border-radius: 100%;
+    transform: translateY(-150%);
+    padding: 0.5vmax;
+    animation: scrollPop 0.5s ease-in infinite alternate;
+}
+
+.homeScrollBtn > svg{
+    font-size-adjust:3vmax;
+    color: rgba(255,255,255);
+}
+
+@keyframes scrollPop{
+    to{
+        transform: translateY(-200%);
+    }
+}
