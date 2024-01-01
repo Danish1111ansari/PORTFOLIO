@@ -9,8 +9,21 @@ import { Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { MouseOutlined } from '@mui/icons-material';
 import TimeLine from "../TimeLine/TimeLine";
+import {
+  SiCplusplus,
+  SiReact,
+  SiJavascript,
+  SiMongodb,
+  SiNodedotjs,
+  SiExpress,
+  SiCss3,
+  SiHtml5,
+  SiThreedotjs,
+  SiPython,
+  FaDatabase
+} from "react-icons/si";
 
-const Home = ({timelines}) => {
+const Home = ({timelines,skills}) => {
   useEffect(() => {
 
     const textureLoader = new THREE.TextureLoader();
@@ -110,10 +123,9 @@ const Home = ({timelines}) => {
   }, []);
   return (
     <div className="home">
-
       <canvas className="homeCanvas"></canvas>
 
-      {/* <div className="homeCanvasContainer">
+      <div className="homeCanvasContainer">
         <Typography variant="h1">
           <p>D</p>
           <p>A</p>
@@ -132,19 +144,55 @@ const Home = ({timelines}) => {
 
       <div className="homeScrollBtn">
         <MouseOutlined/>
-      </div> */}
-
-
+      </div>
 
       <div className="homeContainer">
         <Typography variant="h3">TIMELINE</Typography>
-        <TimeLine timelines={timelines}/>
+        <TimeLine timelines={[1, 2, 3, 4]} />
+      </div>
+
+      <div className="homeSkills">
+        <Typography variant="h3">SKILLS</Typography>
+        <div className="homeCubeSkills">
+          <div className="homeCubeSkillsFace homeCubeSkillsFace1">
+            <img src="" alt="face1" />
+          </div>
+          <div className="homeCubeSkillsFace homeCubeSkillsFac2">
+            <img src="" alt="face2" />
+          </div>
+          <div className="homeCubeSkillsFace homeCubeSkillsFace3">
+            <img src="" alt="face3" />
+          </div>
+          <div className="homeCubeSkillsFace homeCubeSkillsFace4">
+            <img src="" alt="face4" />
+          </div>
+          <div className="homeCubeSkillsFace homeCubeSkillsFace5">
+            <img src="" alt="face5" />
+          </div>
+          <div className="homeCubeSkillsFace homeCubeSkillsFace6">
+            <img src="" alt="face6" />
+          </div>
+        </div>
+
+        <div className="cubeShadow"></div>
+
+        <div className="homeskillsBox" id="homeskillsBox">
+          <SiCplusplus />
+          <SiJavascript />
+          <SiPython/>
+          <SiHtml5 />
+          <SiCss3 />
+          <SiReact />
+          <SiNodedotjs />
+          <SiExpress />
+          <SiMongodb />
+          <SiThreedotjs />
+          {/* <FaDatabase /> */}
+          
+        </div>
       </div>
 
 
-      
-
-      
 
 
     </div>
