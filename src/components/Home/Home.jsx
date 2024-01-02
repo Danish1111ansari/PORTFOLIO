@@ -5,10 +5,13 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import moonImage from "../../Images/moon.jpg";
 import spaceImage from "../../Images/space.jpg";
 import venusImage from "../../Images/venus.jpg";
-import { Typography } from "@mui/material";
+import { Card, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-import { MouseOutlined } from '@mui/icons-material';
+import { MouseOutlined } from "@mui/icons-material";
 import TimeLine from "../TimeLine/TimeLine";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import { Button, CardActionArea, CardActions } from "@mui/material";
 import {
   SiCplusplus,
   SiReact,
@@ -20,12 +23,14 @@ import {
   SiHtml5,
   SiThreedotjs,
   SiPython,
-  FaDatabase
+  FaDatabase,
 } from "react-icons/si";
+// import card from "../ProjectsList/ProjectsList.jsx/ProjectsList"
+import ProjectsList from "./../ProjectsList/ProjectsList";
+import Cube from "../Cube/Cube";
 
-const Home = ({timelines,skills}) => {
+const Home = ({ timelines, skills }) => {
   useEffect(() => {
-
     const textureLoader = new THREE.TextureLoader();
 
     const moonTexture = textureLoader.load(moonImage);
@@ -137,13 +142,12 @@ const Home = ({timelines,skills}) => {
         <div className="homeCanvasBox">
           <Typography variant="h2">CODER</Typography>
           <Typography variant="h2">DEVELOPER</Typography>
+          <Typography variant="h2">DESIGNER</Typography>
         </div>
-
-        <Link to="/projects">VIEW WORK</Link>
       </div>
 
       <div className="homeScrollBtn">
-        <MouseOutlined/>
+        <MouseOutlined />
       </div>
 
       <div className="homeContainer">
@@ -151,50 +155,17 @@ const Home = ({timelines,skills}) => {
         <TimeLine timelines={[1, 2, 3, 4]} />
       </div>
 
-      <div className="homeSkills">
-        <Typography variant="h3">SKILLS</Typography>
-        <div className="homeCubeSkills">
-          <div className="homeCubeSkillsFace homeCubeSkillsFace1">
-            <img src="" alt="face1" />
-          </div>
-          <div className="homeCubeSkillsFace homeCubeSkillsFac2">
-            <img src="" alt="face2" />
-          </div>
-          <div className="homeCubeSkillsFace homeCubeSkillsFace3">
-            <img src="" alt="face3" />
-          </div>
-          <div className="homeCubeSkillsFace homeCubeSkillsFace4">
-            <img src="" alt="face4" />
-          </div>
-          <div className="homeCubeSkillsFace homeCubeSkillsFace5">
-            <img src="" alt="face5" />
-          </div>
-          <div className="homeCubeSkillsFace homeCubeSkillsFace6">
-            <img src="" alt="face6" />
-          </div>
-        </div>
+      <Cube />
 
-        <div className="cubeShadow"></div>
-
-        <div className="homeskillsBox" id="homeskillsBox">
-          <SiCplusplus />
-          <SiJavascript />
-          <SiPython/>
-          <SiHtml5 />
-          <SiCss3 />
-          <SiReact />
-          <SiNodedotjs />
-          <SiExpress />
-          <SiMongodb />
-          <SiThreedotjs />
-          {/* <FaDatabase /> */}
-          
+      <div className="homeProjects">
+        <Typography variant="h3">WEB DEVELOPEMENT PROJECTS</Typography>
+        <div className="homeProjectWrapper">
+          <ProjectsList />
+          <ProjectsList />
+          <ProjectsList />
+          <ProjectsList />
         </div>
       </div>
-
-
-
-
     </div>
   );
 };
