@@ -13,9 +13,7 @@ import ProjectsList from "../ProjectsList/ProjectsList";
 
 const Project = () => {
     <>
-        <ProjectsList/>
-        <ProjectsList/>
-            
+        <h1>projects</h1>
         
     </>
 };
