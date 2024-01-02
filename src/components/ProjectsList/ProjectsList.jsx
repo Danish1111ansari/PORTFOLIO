@@ -4,36 +4,44 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
+import space from "../../Images/space.jpg";
+import { Delete } from "@mui/icons-material";
+import { FaTrash } from "react-icons/fa";
+import "./ProjectsList.css"
 
-const ProjectsList = () => {
+const ProjectsList = (
+  url = "https://github.com/Danish1111ansari",
+  title = "Title Here",
+  image,
+  isAdmin = false,
+  id
+) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image="https://i.pinimg.com/originals/50/08/ef/5008efb9df96969624d2674645027a3a.png"
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Lizard
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-      </CardActions>
-    </Card>
+    <>
+      <div className="homeProjectsList">
+        <Typography variant="h3"> PROJECTS</Typography>
+
+        <div className="homeWrapper">
+          <div className="ProjectsCard">
+            <a href="https://github.com/Danish1111ansari" target="blank">
+              <img src={space} alt="demo" />
+              <Typography>MERN</Typography>
+            </a>
+              <Button
+                style={{
+                  margin: "auto",
+                  display: "block",
+                  color: "rgba(40,40,40,0.7)",
+                }}
+                // onClick={() => deleteHandler(id)}
+              >
+                <FaTrash />
+              </Button>
+           
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

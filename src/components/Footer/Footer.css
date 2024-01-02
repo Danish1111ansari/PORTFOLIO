@@ -3,6 +3,8 @@
     padding: 3vmax;
     display: grid;
     grid-template-columns: 1fr 200px;
+    display: flex;
+    position: relative;
 }
 
 .footer>div>h5 {

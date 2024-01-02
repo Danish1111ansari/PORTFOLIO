@@ -158,8 +158,10 @@ const Home = ({ timelines, skills }) => {
       <Cube />
 
       <div className="homeProjects">
-        <Typography variant="h3">WEB DEVELOPEMENT PROJECTS</Typography>
+        <Typography variant="h3">PROJECTS</Typography>
         <div className="homeProjectWrapper">
+          <ProjectsList />
+          <ProjectsList />
           <ProjectsList />
           <ProjectsList />
          
