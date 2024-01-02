@@ -162,8 +162,7 @@ const Home = ({ timelines, skills }) => {
         <div className="homeProjectWrapper">
           <ProjectsList />
           <ProjectsList />
-          <ProjectsList />
-          <ProjectsList />
+         
         </div>
       </div>
     </div>

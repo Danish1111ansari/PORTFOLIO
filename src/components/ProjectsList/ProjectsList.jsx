@@ -29,6 +29,9 @@ const ProjectsList = () => {
         <Button size="small" color="primary">
           Share
         </Button>
+        <Button size="small" color="primary">
+          Share
+        </Button>
       </CardActions>
     </Card>
   );
