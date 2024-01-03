@@ -19,12 +19,12 @@ const Footer = () => {
           <Typography>Contact Us</Typography>
         </Link>
       </div>
-      <div>
+      <div className="footersocialmedia">
         <Typography variant="h6">Social Media</Typography>
         <a href="https://github.com/Danish1111ansari" target="black">
           <BsGithub />
         </a>
-        <a href="0402danishansari.com" target="black">
+        <a href="/contact" target="black">
           <IoIosMail/>
         </a>
         <a

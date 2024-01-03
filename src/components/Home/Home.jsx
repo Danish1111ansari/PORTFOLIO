@@ -1,31 +1,12 @@
 import React, { useEffect } from "react";
 import "./Home.css";
 import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import moonImage from "../../Images/moon.jpg";
 import spaceImage from "../../Images/space.jpg";
 import venusImage from "../../Images/venus.jpg";
-import { Card, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Typography } from "@mui/material";
 import { MouseOutlined } from "@mui/icons-material";
 import TimeLine from "../TimeLine/TimeLine";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import { Button, CardActionArea, CardActions } from "@mui/material";
-import {
-  SiCplusplus,
-  SiReact,
-  SiJavascript,
-  SiMongodb,
-  SiNodedotjs,
-  SiExpress,
-  SiCss3,
-  SiHtml5,
-  SiThreedotjs,
-  SiPython,
-  FaDatabase,
-} from "react-icons/si";
-// import card from "../ProjectsList/ProjectsList.jsx/ProjectsList"
 import ProjectsList from "./../ProjectsList/ProjectsList";
 import Cube from "../Cube/Cube";
 
@@ -58,13 +39,7 @@ const Home = ({ timelines, skills }) => {
     const venusGeometry = new THREE.SphereGeometry(3, 64, 64);
     const venusMaterial = new THREE.MeshBasicMaterial({ map: venusTexture });
     const venus = new THREE.Mesh(venusGeometry, venusMaterial);
-    venus.position.set(9, 7, 5);
-
-    // const pointLight = new THREE.PointLight(0xffffff, 100);
-    // const pointLight2 = new THREE.PointLight(0xffffff, 20);
-
-    // pointLight.position.set(9, 7, 5);
-    // pointLight2.position.set(1,3,0);
+    venus.position.set(7, 7, 5);
 
     scene.add(moon);
     scene.add(venus);
