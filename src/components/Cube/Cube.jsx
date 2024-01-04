@@ -1,17 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Cube.css";
-import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import moonImage from "../../Images/moon.jpg";
-import spaceImage from "../../Images/space.jpg";
-import venusImage from "../../Images/venus.jpg";
-import { Card, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
-import { MouseOutlined } from "@mui/icons-material";
-import TimeLine from "../TimeLine/TimeLine";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import { Button, CardActionArea, CardActions } from "@mui/material";
+import { Typography } from "@mui/material";
 import {
   SiCplusplus,
   SiReact,
@@ -23,7 +12,6 @@ import {
   SiHtml5,
   SiThreedotjs,
   SiPython,
-  FaDatabase,
 } from "react-icons/si";
 
 const Cube = () => {
@@ -70,7 +58,6 @@ const Cube = () => {
           </div>
         </div>
 
-        <div className="cubeShadow"></div>
 
         <div className="homeskillsBox" id="homeskillsBox">
           <SiCplusplus />
@@ -85,6 +72,7 @@ const Cube = () => {
           <SiThreedotjs />
           {/* <FaDatabase /> */}
         </div>
+        <div className="cubeShadow"></div>
       </div>
     </>
   );

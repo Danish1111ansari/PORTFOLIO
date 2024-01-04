@@ -7,6 +7,8 @@
     max-width: 100%;
     height: 100vh;
     max-width: 100%;
+    width: 100%;
+    height: 100%;
     /* filter: blur(1px); */
 
 }
@@ -61,26 +63,7 @@
     color: rgb(0, 0, 0);
 }
 
-.homeCanvasContainer>a {
-    filter: drop-shadow(0 0 20px rgb(28, 116, 216));
-    background-color: rgba(0,0,0,0);
-    transition: all 0.5s;
-    color: rgb(0, 0, 0);
-    font: 900 1rem "Ubuntu Mono", "Roboto";
-    font-size: 30px;
-    text-decoration: none;
-    padding: 1vmax 2vmax;
-    box-sizing: border-box;
-    /* border: 1px solid white; */
-    position: absolute;
-    left: 38%;
-    top: 59%;
-    transform: translate(-50%, -50%);
-}
 
-.homeCanvasContainer>a:hover {
-    color: rgb(255, 255, 255);
-}
 
 .homeScrollBtn {
     display: flex;
@@ -191,51 +174,92 @@
 }
 
 @media screen and (max-width: 600px) {
-    .homeCanvas{
-        position: absolute;
-        margin-bottom: 12000px;
-        width: 10%;
-        height: 10%;
 
-    }
-    .homeCanvasContainer>a {
-        transform: translate(-50%, 0%);
-        bottom: 10%;
-        top: unset;
-    }
+.homeCanvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* filter: blur(1px); */
+}
 
-    .homeCanvasBox>h2 {
-        font: 900 2rem "Ubuntu Mono", "Roboto";
-        letter-spacing: 15px;
-        line-height: 60px;
-    }
 
-    .homeCubeSkills {
-        width: 100x;
-        height: 100px;
-    }
 
-    .homeCubeSkillsFace1 {
-        transform: translate3d(0, 0, 75px);
-    }
 
-    .homeCubeSkillsFace2 {
-        transform: rotateY(180deg) translate3d(0, 0, 75px);
-    }
+.homeCanvasContainer {
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0,0);
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    height: 100vh;
+    color: white;
+    display: flex;
+}
 
-    .homeCubeSkillsFace3 {
-        transform: rotateY(-90deg) translate3d(0, 0, 75px);
-    }
+.homeCanvasContainer>h1 {
+    filter: drop-shadow(0 0 10px rgb(28, 116, 216));
+    position: absolute;
+    top: 40%;
+    left: 0%;
+    background-color: rgba(0,0,0,0.0);
+    padding: 3vmax;
+    transform: translate(0%, -50%);
+    text-align: center;
+    font: 700 4vmax "Josefin Sans", sans-serif;
+}
 
-    .homeCubeSkillsFace4 {
-        transform: rotateY(90deg) translate3d(0, 0, 75px);
-    }
+.homeCanvasContainer>h1>p {
+    transition: all 0.2s;
+    color: rgb(0, 0, 0);
+}
 
-    .homeCubeSkillsFace5 {
-        transform: rotateX(90deg) translate3d(0, 0, 75px);
-    }
+.homeCanvasContainer>h1>p:hover {
+    transform: translateY(-10px);
+}
 
-    .homeCubeSkillsFace6 {
-        transform: rotateX(-90deg) translate3d(0, 0, 75px);
-    }
+.homeCanvasBox {
+    /* background-color: brown; */
+    width: 60%;
+    position: absolute;
+    top: 40%;
+    margin: auto;
+    padding: 1vmax 1vmax;
+    text-align: center;
+    transform: translate(0%, -50%);
+}
+
+.homeCanvasBox>h2 {
+    filter: drop-shadow(0 0 10px rgb(28, 116, 216));
+    font: 900 2rem "Ubuntu Mono", "Roboto";
+    letter-spacing: 10px;
+    line-height: 100px;
+    color: rgb(0, 0, 0);
+}
+
+
+.homeScrollBtn {
+    /* display: flex; */
+    /* background-color: brown; */
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    border-radius: 100%;
+    /* transform: translateY(-150%); */
+    /* padding: 0.5vmax; */
+    /* animation: scrollPop 0.5s ease-in infinite alternate; */
+}
+
+.homeScrollBtn>svg {
+    font-size: 3vmax;
+    color: rgb(255, 255, 255);
+}
+.home {
+    background-color: white;
+}
+
+   
 }
