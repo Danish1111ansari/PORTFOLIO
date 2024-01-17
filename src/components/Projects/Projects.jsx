@@ -4,24 +4,24 @@ import "./Projects.css"
 import { Button, Typography } from "@mui/material";
 import { AiOutlineProject } from 'react-icons/ai';
 import { FaRegSmileWink } from "react-icons/fa";
-import venus from "../../Images/space.jpg";
+import moon from "../../Images/moon.jpg";
 import { Delete } from "@mui/icons-material";
-// import { ProjectCard } from './../../../../mernPortfolio/frontend/src/components/Projects/Projects';
+
 
 export const ProjectCard = (
-  url="https://github.com/Danish1111ansari",
-  projectImage={venus},
-  projectTitle="MERN",
-  description="This is MERN projects",
-  technologies="NodeJs, ReactJs ,ExpressJs,MongoDb",
-  isAdmin = false,
-  id
+ { url,
+  projectImage,
+  projectTitle,
+  description,
+  technologies,
+  isAdmin,
+  id}
 ) => {
     return (
       <>
         <a href={url} className="projectCard" target="black">
           <div>
-            <img src={venus} alt="Project" />
+            <img src={projectImage} alt="Project" />
             <Typography variant="h5">{projectTitle}</Typography>
           </div>
           <div>
@@ -31,32 +31,59 @@ export const ProjectCard = (
           </div>
         </a>
 
-          <Button
+          {/* <Button
             style={{ color: "rgba(40,40,40,0.7)" }}
             // onClick={() => deleteHandler(id)}
           >
-            <Delete />
-          </Button>
+          </Button> */}
+            {/* <Delete /> */}
         
       </>
     );
 };
 
 const Projects = () => {
+
   return (
     <div className="projects">
-          <Typography variant="h3">
-              Projects <AiOutlineProject/>
-          </Typography>
-          <div className="projectWrapper">
-              <ProjectCard/>
-              <ProjectCard/>
-              <ProjectCard/>
-              <ProjectCard/>
-          </div>
-          <Typography variant="h3"  className="projectlasth3" style={{ font: "100 1.2rem 'Ubuntu Mono'" }}>
-              All the projects shown above are made by me <FaRegSmileWink/>
-          </Typography>
+      <Typography variant="h3">
+        Projects <AiOutlineProject />
+      </Typography>
+      <div className="projectWrapper">
+        <ProjectCard
+          url="https://lazy-cyan-python.cyclic.app/"
+          projectImage={moon}
+          projectTitle="NEWBAZAR"
+          description="Designed a fully responsive and dynamic full stack web application with MERN.
+REACT is use to build a responsive and dynamic user interface. create a back-end API with Express and Node.js.
+store data in a NoSQL database with MongoDB. user and Admin have thier different pannels.
+functionality - Register, login and forgotPassword authentication, creation of the product (price, description, etc),
+category of the product, status of the product (deliver, processing, etc), manage payment using Braintree payment gateway."
+          technologies="React, Node.js, MongoDb express etc."
+          isAdmin={true} 
+          id={123}
+        />
+        <ProjectCard
+          url="https://lazy-cyan-python.cyclic.app/"
+          projectImage={moon}
+          projectTitle="NEWBAZAR"
+          description="Designed a fully responsive and dynamic full stack web application with MERN.
+REACT is use to build a responsive and dynamic user interface. create a back-end API with Express and Node.js.
+store data in a NoSQL database with MongoDB. user and Admin have thier different pannels.
+functionality - Register, login and forgotPassword authentication, creation of the product (price, description, etc),
+category of the product, status of the product (deliver, processing, etc), manage payment using Braintree payment gateway."
+          technologies="React, Node.js, MongoDb express etc."
+          isAdmin={true} 
+          id={123}
+        />
+      </div>
+      <Typography
+        variant="h3"
+        className="projectlasth3"
+        style={{ font: "100 1.2rem 'Ubuntu Mono'" }}
+      >
+        All the projects shown above are made by me <FaRegSmileWink />
+      </Typography>
     </div>
   );
 };

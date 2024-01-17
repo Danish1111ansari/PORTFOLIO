@@ -221,7 +221,7 @@
 
 .homeCanvasBox {
     /* background-color: brown; */
-    width: 60%;
+    width: fit-content;
     position: absolute;
     top: 40%;
     margin: auto;

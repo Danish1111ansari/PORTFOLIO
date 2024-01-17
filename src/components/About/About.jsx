@@ -8,9 +8,11 @@ const About = () => {
     <div className="about">
       <div className="aboutContainer">
         <Typography>
-          This is Description Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Accusamus harum consectetur minus facilis asperiores ea rem
-          nobis sunt porro natus.
+          I am currently a B-Tech student (2024 grad) pursuing Computer science
+          and engineering at National Institute of Technology Patna. I am self
+          motivated, hard working ,Team player, goal oriented and very keen and
+          ambitious to learn new technologies and explore it. I am efficient in
+          web developement and data structure and algorithm.
         </Typography>
       </div>
       <div className="aboutContainer2">
@@ -22,7 +24,30 @@ const About = () => {
           >
             Mohd Danish Ansari
           </Typography>
-          <Typography>Full Stack Developer and Coder</Typography>
+          <Typography
+            variant="h6"
+            style={{ margin: "0.2vmax 0", padding: "0 0", color: "black" }}
+          >
+            Full Stack Web Developer
+          </Typography>
+          <Typography
+            variant="h6"
+            style={{ margin: "0.2vmax 0", color: "black" }}
+          >
+            Competitive Programmer
+          </Typography>
+          <Typography
+            variant="h6"
+            style={{ margin: "0.2vmax 0", color: "black" }}
+          >
+            Freelancer
+          </Typography>
+          <Typography
+            variant="h6"
+            style={{ margin: "0.2vmax 0", color: "black" }}
+          >
+            Subject Matter Expert
+          </Typography>
         </div>
       </div>
     </div>

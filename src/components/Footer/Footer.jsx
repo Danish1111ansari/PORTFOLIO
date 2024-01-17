@@ -11,8 +11,7 @@ const Footer = () => {
       <div>
         <Typography variant="h5">About Me</Typography>
         <Typography>
-          Hey, my name is Danish Ansari. I am a Full-Stack Developer and
-          Programmer
+          Motivation is temporary, but discipline last forever.
         </Typography>
 
         <Link to="/contact" className="footerContactBtn">
@@ -25,7 +24,7 @@ const Footer = () => {
           <BsGithub />
         </a>
         <a href="/contact" target="black">
-          <IoIosMail/>
+          <IoIosMail />
         </a>
         <a
           href="https://www.linkedin.com/in/mohd-danish-ansari-50496622a/"

@@ -10,6 +10,7 @@ import TimeLine from "../TimeLine/TimeLine";
 import ProjectsList from "./../ProjectsList/ProjectsList";
 import Cube from "../Cube/Cube";
 
+
 const Home = ({ timelines, skills }) => {
   useEffect(() => {
     const textureLoader = new THREE.TextureLoader();
@@ -92,13 +93,14 @@ const Home = ({ timelines, skills }) => {
       camera.rotation.z = window.scrollY * 0.001;
       camera.rotation.y = window.scrollY * 0.003;
 
-      const skillsBox = document.getElementById("homeskillsBox");
+      // const skillsBox = document.getElementById("homeskillsBox");
 
-      if (window.scrollY > 1500) {
-        skillsBox.style.animationName = "homeskillsBoxAnimationOn";
-      } else {
-        skillsBox.style.animationName = "homeskillsBoxAnimationOff";
-      }
+      // if (window.scrollY > 1200) {
+      //   skillsBox.style.animationName = "homeskillsBoxAnimationOn";
+      // }
+      //  else {
+      //   skillsBox.style.animationName = "homeskillsBoxAnimationOff";
+      // }
     });
   }, []);
   return (
@@ -135,11 +137,17 @@ const Home = ({ timelines, skills }) => {
       <div className="homeProjects">
         <Typography variant="h3">PROJECTS</Typography>
         <div className="homeProjectWrapper">
-          <ProjectsList />
-          <ProjectsList />
-          <ProjectsList />
-          <ProjectsList />
-         
+          <ProjectsList
+            url="https://lazy-cyan-python.cyclic.app/"
+            title="NEWBAZAR"
+            image={moonImage}
+          />
+          <ProjectsList
+            url="https://lazy-cyan-python.cyclic.app/"
+            title="NEWBAZAR"
+            image={moonImage}
+          />
+          
         </div>
       </div>
     </div>

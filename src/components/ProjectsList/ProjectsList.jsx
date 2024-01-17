@@ -9,13 +9,7 @@ import { Delete } from "@mui/icons-material";
 import { FaTrash } from "react-icons/fa";
 import "./ProjectsList.css"
 
-const ProjectsList = (
-  url = "https://github.com/Danish1111ansari",
-  title = "Title Here",
-  image,
-  isAdmin = false,
-  id
-) => {
+const ProjectsList = ({ url, title, image, isAdmin = false, id = "123" }) => {
   return (
     <>
       <div className="homeProjectsList">
@@ -23,21 +17,10 @@ const ProjectsList = (
 
         <div className="homeWrapper">
           <div className="ProjectsCard">
-            <a href="https://github.com/Danish1111ansari" target="blank">
-              <img src={space} alt="demo" />
-              <Typography>MERN</Typography>
+            <a href={url} target="blank">
+              <img src={image} alt="demo" />
+              <Typography>{title}</Typography>
             </a>
-              <Button
-                style={{
-                  margin: "auto",
-                  display: "block",
-                  color: "rgba(40,40,40,0.7)",
-                }}
-                // onClick={() => deleteHandler(id)}
-              >
-                <FaTrash />
-              </Button>
-           
           </div>
         </div>
       </div>
