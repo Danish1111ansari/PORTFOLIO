@@ -2,16 +2,14 @@ import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.css"
 import { Typography, Button } from '@mui/material';
-import { useNavigate } from "react-router-dom";
-import Alert from "@mui/material/Alert";
-import CheckIcon from "@mui/icons-material/Check";
+
 
 const Contact = () => {
   const form = useRef();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const navigate = useNavigate();
+
 
   const contactFormHandler = (e) => {
     e.preventDefault();

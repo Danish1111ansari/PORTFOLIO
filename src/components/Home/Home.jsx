@@ -3,6 +3,8 @@ import "./Home.css";
 import * as THREE from "three";
 import moonImage from "../../Images/moon.jpg";
 import spaceImage from "../../Images/space.jpg";
+import ecommerce from "../../Images/ecommerce.png";
+import BlogApp from "../../Images/BlogApp.png";
 import venusImage from "../../Images/venus.jpg";
 import { Typography } from "@mui/material";
 import { MouseOutlined } from "@mui/icons-material";
@@ -129,7 +131,9 @@ const Home = ({ timelines, skills }) => {
 
       <div className="homeContainer">
         <Typography variant="h3">TIMELINE</Typography>
-        <TimeLine timelines={[1, 2, 3, 4]} />
+        <TimeLine date="12/04/2023" title="NEWBAZAR" />
+        <TimeLine date="20/07/2023" title="Blogify" />
+        <TimeLine date="05/11/2023" title="PORTFOLIO" />
       </div>
 
       <Cube />
@@ -140,14 +144,13 @@ const Home = ({ timelines, skills }) => {
           <ProjectsList
             url="https://lazy-cyan-python.cyclic.app/"
             title="NEWBAZAR"
-            image={moonImage}
+            image={ecommerce}
           />
           <ProjectsList
-            url="https://lazy-cyan-python.cyclic.app/"
-            title="NEWBAZAR"
-            image={moonImage}
+            url="https://lively-cendol-acc12b.netlify.app/"
+            title="Blogify"
+            image={BlogApp}
           />
-          
         </div>
       </div>
     </div>

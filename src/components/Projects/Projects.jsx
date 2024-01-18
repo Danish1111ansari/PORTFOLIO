@@ -1,11 +1,11 @@
 import React from "react";
 // import ProjectsList from "../ProjectsList/ProjectsList";
 import "./Projects.css"
-import { Button, Typography } from "@mui/material";
+import {Typography } from "@mui/material";
 import { AiOutlineProject } from 'react-icons/ai';
 import { FaRegSmileWink } from "react-icons/fa";
-import moon from "../../Images/moon.jpg";
-import { Delete } from "@mui/icons-material";
+import ecommerce from "../../Images/ecommerce.png";
+import BlogApp from "../../Images/BlogApp.png";
 
 
 export const ProjectCard = (
@@ -52,7 +52,7 @@ const Projects = () => {
       <div className="projectWrapper">
         <ProjectCard
           url="https://lazy-cyan-python.cyclic.app/"
-          projectImage={moon}
+          projectImage={ecommerce}
           projectTitle="NEWBAZAR"
           description="Designed a fully responsive and dynamic full stack web application with MERN.
 REACT is use to build a responsive and dynamic user interface. create a back-end API with Express and Node.js.
@@ -60,20 +60,18 @@ store data in a NoSQL database with MongoDB. user and Admin have thier different
 functionality - Register, login and forgotPassword authentication, creation of the product (price, description, etc),
 category of the product, status of the product (deliver, processing, etc), manage payment using Braintree payment gateway."
           technologies="React, Node.js, MongoDb express etc."
-          isAdmin={true} 
+          isAdmin={true}
           id={123}
         />
         <ProjectCard
           url="https://lazy-cyan-python.cyclic.app/"
-          projectImage={moon}
+          projectImage={BlogApp}
           projectTitle="NEWBAZAR"
-          description="Designed a fully responsive and dynamic full stack web application with MERN.
+          description="Designed a fully responsive full stack web application with MERN.
 REACT is use to build a responsive and dynamic user interface. create a back-end API with Express and Node.js.
-store data in a NoSQL database with MongoDB. user and Admin have thier different pannels.
-functionality - Register, login and forgotPassword authentication, creation of the product (price, description, etc),
-category of the product, status of the product (deliver, processing, etc), manage payment using Braintree payment gateway."
+store data in a NoSQL database with MongoDB."
           technologies="React, Node.js, MongoDb express etc."
-          isAdmin={true} 
+          isAdmin={true}
           id={123}
         />
       </div>
